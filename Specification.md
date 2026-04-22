@@ -2,6 +2,8 @@
 
 The 3D Tiles Archive format 1.3 is based on the ZIP file format as defined by the ISO/IEC 21320-1:2015 specification; see https://www.iso.org/standard/60101.html. It adds the Zstandard compression method defined in “APPNOTE - .Zip File Format Specification” version 6.3.9; see https://pkware.cachefly.net/webdocs/APPNOTE/APPNOTE-6.3.9.TXT. The Zstandard compression format itself is defined in IETF RFC 8474; see https://tools.ietf.org/html/rfc8478.
 
+The key words MUST, MUST NOT, SHOULD, SHOULD NOT, and MAY in this document are to be interpreted as described in RFC 2119.
+
 A 3D Tiles archive MUST be a valid ZIP file according to the ISO/IEC 21320-1:2015 specification, with the addition of the Zstandard compression method as defined in “APPNOTE - .Zip File Format Specification” version 6.3.9, noting that it MUST use compression method ID 93 to indicate that Zstandard was used.
 
 > **Informative note**: _For optimal read performance, files in the archive read fastest when stored without compression. However, the Zstandard compression method provides a good trade-off between read performance and file size. For best compatibility with legacy software, the standard DEFLATE compression method provides the widest support, although it is the slowest of the three methods._
