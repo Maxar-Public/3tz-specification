@@ -18,9 +18,11 @@ All references should resolve to within a given distribution unit (a known colle
 
 Nesting 3tz files is not allowed, as in, a 3tz archive must not be put inside another 3tz archive.
 
-Filenames and directory names in a 3tz archive must not contain the substring ".3tz".
+Filenames and directory names inside a 3tz archive must not contain the substring `.3tz` or `.3dtiles.zip`.
 
-The archive must use the *.3tz file extension.
+The archive must use the `.3tz` file extension or the `.3dtiles.zip` file extension.
+
+The archive should use the `application/vnd.maxar.archive.3tz+zip` Media Type.
 
 The archive must contain a valid index file and it must be stored uncompressed, to improve load and read performance when the archive contains a very large number of files. The index file must be named `@3dtilesIndex1@` and must be the last file in the archive (read: it must be the last entry in the zip’s Central Directory [see Zip File Format Specification]).
 
